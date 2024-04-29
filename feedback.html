@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- Contact Section -->
+<main>
+<section id="feedback">
+    <h1>Leave Feedback</h1>
+    <p>Let us know about your experience.</p>
+    <div class="feedback_container">
+        <form action="feedbackmessage.html" method="post">
+            <div class="form">
+                <input type="text" name="first_name" required placeholder="First Name*">
+                <input type="text"  name="last_name" required placeholder="Last Name*">
+            </div>
+            <div class="form">
+                <input type="email"  name="email" required placeholder="Email*">
+            </div>
+            <div class="form">
+                <input type="text"  name="hospital_name" required placeholder="Hospital Name*">
+            </div>
+            <div class="form">
+                <textarea name="message" rows="8" required placeholder="Your Feedback"></textarea>
+            </div>
+            <button type="submit" class="submit_feedback_btn">Submit Feedback</button>
+        </form>
+    </div>
+</section>
+</main>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+<div class="container">
+    <div class="sidebar">
+        <nav>
+            <ul>
+
+                <div class="brand">
+                    <img src="images/logo.png" alt="Listen NHS Trust Logo">
+                </div>
+
+                <li><a href="#">
+                    <i class="nav nav-dashboard"></i>
+                    <img src="images/dashboard-icon.png" alt="Dashboard">
+                    <span class="nav-item">Dashboard</span>
+                </a></li>
+
+                <li><a href="#">
+                    <i class="nav nav-appointments"></i>
+                    <img src="images/appointments-icon.png" alt="Appointments">
+                    <span class="nav-item">Appointments</span>
+                </a></li>
+
+                <li><a href="#">
+                    <i class="nav nav-medical-reports"></i>
+                    <img src="images/medical-reports-icon.png" alt="Medical Reports">
+                    <span class="nav-item">Medical Reports</span>
+                </a></li>
+
+                <li><a href="#">
+                    <i class="nav nav-prescriptions"></i>
+                    <img src="images/prescriptions-icon.png" alt="Prescriptions">
+                    <span class="nav-item">Prescriptions</span>
+                </a></li>
+
+                <li><a href="#">
+                    <i class="nav nav-settings"></i>
+                    <img src="images/settings-icon.png" alt="Settings">
+                    <span class="nav-item">Settings</span>
+                </a></li>
+
+                <li><a href="#">
+                    <i class="nav nav-signOut"></i>
+                    <img src="images/sign-out-icon.png" alt="Sign Out Icon">
+                    <span class="nav-item">Sign Out</span>
+                </a></li>
+
+            </ul>
+        </nav>
+
+    </div>
+
+    <main>
+        <header class="header">
+            <h1>Dashboard</h1>
+            <div class="profile">
+                <span>Jonitha Cathrine</span>
+                <span>NHS: 123 456 7890</span>
+            </div>
+        </header>
+
+        <section class="appointments">
+            <div class="tabs">
+                <span class="active">New Appointments</span>
+                <span>Completed Appointments</span>
+            </div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Date</th>
+                        <th>Doctor</th>
+                        <th>Purpose</th>
+                        <th>Location</th>
+                        <th>Action</th>
+                        <th>Feedback</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>10:15 AM</td>
+                        <td>27/08/2024</td>
+                        <td>Dr. Susan</td>
+                        <td>Heart Health Scanning</td>
+                        <td><a href="#">View Address</a></td>
+                        <td><button>Cancel/Reschedule</button></td>
+                        <td><button onclick="location.href='feedback.html'">Leave a Feedback</button></td>
+
+                    </tr>
+                    <tr>
+                        <td>11:00 AM</td>
+                        <td>13/09/2024</td>
+                        <td>Dr. John</td>
+                        <td>Acne Management Consultation</td>
+                        <td><a href="#">View Address</a></td>
+                        <td><button>Cancel/Reschedule</button></td>
+                        <td><button onclick="location.href='feedback.html'">Leave a Feedback</button></td>
+
+                    </tr>
+                    <tr>
+                        <td>10:15 AM</td>
+                        <td>14/09/2024</td>
+                        <td>Dr. John</td>
+                        <td>Follow-Up for Skin Treatment</td>
+                        <td><a href="#">View Address</a></td>
+                        <td><button>Cancel/Reschedule</button></td>
+                        <td><button onclick="location.href='feedback.html'">Leave a Feedback</button></td>
+
+                    </tr>
+                    <tr>
+                        <td>9:30 AM</td>
+                        <td>05/12/2024</td>
+                        <td>Dr. John</td>
+                        <td>Dermatology Consult</td>
+                        <td><a href="#">View Address</a></td>
+                        <td><button>Cancel/Reschedule</button></td>
+                        <td><button onclick="location.href='feedback.html'">Leave a Feedback</button></td>
+
+                    </tr>
+                    <tr>
+                        <td>3:45 PM</td>
+                        <td>19/12/2024</td>
+                        <td>Dr. John</td>
+                        <td>Mole</td>
+                        <td><a href="#">View Address</a></td>
+                        <td><button>Cancel/Reschedule</button></td>
+                        <td><button onclick="location.href='feedback.html'">Leave a Feedback</button></td>
+
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="activity">
+            <h2>Activity Overview</h2>
+            <div class="overview-cards">
+                <div class="card">
+                    <span>Upcoming Appointments</span>
+                    <span>4</span>
+                </div>
+                <div class="card">
+                    <span>Health Records</span>
+                    <span>15</span>
+                </div>
+                <div class="card">
+                    <span>Prescriptions Order</span>
+                    <span>2</span>
+                </div>
+                <div class="card">
+                    <span>View Messages</span>
+                    <span>0</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="prescription">
+            <h2>Prescription Status</h2>
+            <div class="prescription-requests">
+                <div class="request">
+                    <span>Request #1:</span>
+                    <p>Medication Name: Atorvastatin</p>
+                    <p>Quantity: 30 tablets</p>
+                    <p>Dosage: 20 mg</p>
+                    <p>Request On: Date</p>
+                    <div class="status">
+                        <span>Pending Approval</span>
+                    </div>
+                </div>
+                <div class="request">
+                    <span>Request #2:</span>
+                    <p>Medication Name: Metformin</p>
+                    <p>Quantity: 60 tablets</p>
+                    <p>Dosage: 500 mg</p>
+                    <p>Request On: Date</p>
+                    <div class="status">
+                        <span>Awaiting Doctor's Confirmation</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+</body>

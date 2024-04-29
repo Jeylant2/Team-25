@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Get Started</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<!-- Body Section -->
+<body>
+<!-- Header Section -->
+<header>
+    <img src="images/logo.png" alt="Listen Logo" class="logo_get_started">
+</header>
+<!-- Main Content Section-->
+<main id="registration_form">
+    <h1>Get Started</h1>
+    <div class="progress_bar">
+        <span class="progress_step active"></span>
+        <span class="progress_step"></span>
+        <span class="progress_step"></span>
+        <span class="progress_step"></span>
+    </div>
+    <form action="registration.php" method="POST">
+        <section class="form_section" id="section1">
+            <h2>Help us gather some information</h2>
+            <div class="input_section">
+                <label for="f_name">First Name</label>
+                <input type="text" id="f_name" name="f_name" placeholder="Type">
+            </div>
+            <div class="input_section">
+                <label for="l_name">Last Name</label>
+                <input type="text" id="l_name" name="l_name" placeholder="Type">
+            </div>
+            <div class="input_section">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob">
+            </div>
+            <div class="input_section">
+                <label for="nhs_number">NHS Number</label>
+                <input type="number" id="nhs_number" name="nhs_number" placeholder="Enter 10-Digit Number*">
+            </div>
+            <button type="button" class="next_btn" onclick="goToSection(2)">Next</button>
+        </section>
+        <section class="form_section" id="section2" hidden>
+            <h2>Your Health and Contact Information</h2>
+            <div class="input_section">
+                <label for="h_condition">Health Condition</label>
+                <input type="text" id="h_condition" name="h_condition" placeholder="Type">
+            </div>
+            <div class="input_section">
+                <label for="c_number">Contact Number</label>
+                <input type="number" id="c_number" name="c_number" placeholder="Type">
+            </div>
+            <button type="button" class="next_btn" onclick="goToSection(3)">Next</button>
+        </section>
+        <section class="form_section" id="section3" hidden>
+            <h2>Register with Listen</h2>
+            <div class="input_section">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="E.g. johndoe@gmail.com*">
+            </div>
+            <div class="input_section">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password*">
+            </div>
+            <div class="input_section">
+                <label for="confirm_password">Confirm Password</label>
+                <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm password*">
+            </div>
+            <div class="terms_and_conditions">
+                <input type="checkbox" id="confirm_agreement" name="confirm_agreement">
+                <label for="confirm_agreement">By ticking, you are confirming that you have read, understood and agree to the terms and conditions.</label>
+            </div>
+            <button type="submit" class="next_btn" onclick="goToSection(4)">Register</button>
+        </section>
+        <section class="form_section" id="section4" hidden>
+            <h2>Thank you for registering with us!</h2>
+            <p>Your registration is now complete. You can now log in to your account at any time to access our services.</p>
+            <img src="images/tick.png" alt="Tick" class="check_icon">
+            <button type="button" class="next_btn"  onclick="completeAndRedirect();" >Go to Login Page</button>
+        </section>
+    </form>
+</main>
+<script src="js/getstarted.js"></script>
+<script>
+    function completeAndRedirect() {
+        goToSection(5);
+        setTimeout(function () {
+            window.location = 'login.html';
+        }, 250000);
+    }
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        <?php if ($registrationResult === 'error' || $registrationResult === 'password_mismatch' || $registrationResult === 'empty'): ?>
+        alert('Please re-enter your details.');
+        goToSection(4);
+        <?php endif; ?>
+    });
+</script>
+
+</body>
+</html>
