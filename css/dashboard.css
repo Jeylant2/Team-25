@@ -1,0 +1,177 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: gray;
+  text-decoration: none;
+}
+
+.container .sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 20vw;
+  height: 100vh;
+  background-color: #ffff;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+
+.container .sidebar ul li {
+  list-style: none;
+  padding: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+i {
+  margin-right: 10px;
+}
+
+.container .sidebar ul li:hover {
+  background-color: lightgray;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f4fa;
+}
+
+.brand {
+  text-align: center;
+  margin-top: -50px;
+  margin-bottom: 40px;
+}
+
+.brand h2 {
+  color: #1574e5;
+}
+
+.brand img {
+  height: 350px;
+}
+
+
+
+main {
+  margin-left: 20%;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 24px;
+  padding-bottom: 15px;
+}
+
+.profile {
+  text-align: right;
+}
+
+.appointments {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tabs span {
+  cursor: pointer;
+  padding: 10px;
+}
+
+.tabs .active {
+  border-bottom: 2px solid #1574e5;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f0f0f0;
+}
+
+
+button {
+  padding: 5px 10px;
+  background-color: #1574e5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #105cbe;
+}
+
+.activity {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.activity .overview-cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  text-align: center;
+  padding: 20px;
+  background-color: #e6f3ff;
+  border-radius: 10px;
+}
+
+.prescription {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.prescription-requests {
+  display: flex;
+  flex-direction: column;
+}
+
+.request {
+  margin-bottom: 20px;
+}
+
+.status {
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+.status span {
+  color: #1574e5;
+}
+
